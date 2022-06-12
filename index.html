@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="calculatrice">
+        <div class="ecran">
+            <h4 id="nombre1">0</h4>
+            <h3 id="signe">+</h3>
+            <h4 id="nombre2">0</h4>
+            <h3>=</h3>
+            <hr>
+            <h4 id="resultat">0</h4>
+        </div>
+        <div class="touch_zone">
+            <span style="color:blue" onmousedown="ombre_on($('span:nth-child(1)'))" onmouseup="ombre_off($('span:nth-child(1)'))" onclick="delete_all()">C</span>
+            <span style="color:red" onmousedown="ombre_on($('span:nth-child(2)'))" onmouseup="ombre_off($('span:nth-child(2)'))">Erase</span>
+            <span onmousedown="ombre_on($('span:nth-child(3)'))" onmouseup="ombre_off($('span:nth-child(3)'))" onclick="change_signe($('span:nth-child(3)'))">%</span>
+            <span onmousedown="ombre_on($('span:nth-child(4)'))" onmouseup="ombre_off($('span:nth-child(4)'))" onclick="change_signe($('span:nth-child(4)'))">/</span>
+            <span onmousedown="ombre_on($('span:nth-child(5)'))" onmouseup="ombre_off($('span:nth-child(5)'))" onclick="ecrire($('span:nth-child(5)'))">7</span>
+            <span onmousedown="ombre_on($('span:nth-child(6)'))" onmouseup="ombre_off($('span:nth-child(6)'))" onclick="ecrire($('span:nth-child(6)'))">8</span>
+            <span onmousedown="ombre_on($('span:nth-child(7)'))" onmouseup="ombre_off($('span:nth-child(7)'))" onclick="ecrire($('span:nth-child(7)'))">9</span>
+            <span onmousedown="ombre_on($('span:nth-child(8)'))" onmouseup="ombre_off($('span:nth-child(8)'))" onclick="change_signe($('span:nth-child(8)'))">*</span>
+            <span onmousedown="ombre_on($('span:nth-child(9)'))" onmouseup="ombre_off($('span:nth-child(9)'))" onclick="ecrire($('span:nth-child(9)'))">4</span>
+            <span onmousedown="ombre_on($('span:nth-child(10)'))" onmouseup="ombre_off($('span:nth-child(10)'))" onclick="ecrire($('span:nth-child(10)'))">5</span>
+            <span onmousedown="ombre_on($('span:nth-child(11)'))" onmouseup="ombre_off($('span:nth-child(11)'))" onclick="ecrire($('span:nth-child(11)'))">6</span>
+            <span onmousedown="ombre_on($('span:nth-child(12)'))" onmouseup="ombre_off($('span:nth-child(12)'))" onclick="change_signe($('span:nth-child(12)'))">-</span>
+            <span onmousedown="ombre_on($('span:nth-child(13)'))" onmouseup="ombre_off($('span:nth-child(13)'))" onclick="ecrire($('span:nth-child(13)'))">1</span>
+            <span onmousedown="ombre_on($('span:nth-child(14)'))" onmouseup="ombre_off($('span:nth-child(14)'))" onclick="ecrire($('span:nth-child(14)'))">2</span>
+            <span onmousedown="ombre_on($('span:nth-child(15)'))" onmouseup="ombre_off($('span:nth-child(15)'))" onclick="ecrire($('span:nth-child(15)'))">3</span>
+            <span onmousedown="ombre_on($('span:nth-child(16)'))" onmouseup="ombre_off($('span:nth-child(16)'))" onclick="change_signe($('span:nth-child(16)'))">+</span>
+            <span onmousedown="ombre_on($('span:nth-child(17)'))" onmouseup="ombre_off($('span:nth-child(17)'))" class="zero" onclick="ecrire($('span:nth-child(17)'))">0</span>
+            <span onmousedown="ombre_on($('span:nth-child(18)'))" onmouseup="ombre_off($('span:nth-child(18)'))" onclick="ecrire($('span:nth-child(18)'))">00</span>
+            <span onclick="calculer()" onmousedown="ombre_on($('span:nth-child(19)'))" onmouseup="ombre_off($('span:nth-child(19)'))">=</span>
+            
+        </div>
+    </div>
+    <div class="tgl_btn" id="tgl_btn">
+        <div class="boule" id="boule"></div>
+    </div>
+    <div class="carree"></div>
+    <div class="form">
+        <input type="number" placeholder="Entrer nombre1 " name="" id="number1_inpt">
+        <input type="number" placeholder="Entrer nombre2" name="" id="number2_inpt">
+    </div>
+    <marquee behavior="" direction=""></marquee>
+        
+    
+    <script src="script.js"></script>
+</body>
+</html>
